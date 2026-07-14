@@ -2,20 +2,28 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameConfig config;
     private Rigidbody2D rb;
 
     private Vector2 dragStart;
     private Vector2 dragEnd;
 
-    [SerializeField]
-    private float launchForce = 5f;
-
     private bool dragging = false;
 
-    void Awake()
+private void Awake()
+{
+    rb = GetComponent<Rigidbody2D>();
+
+    config = Resources.Load<GameConfig>("GameConfig");
+
+    if (config == null)
     {
-        rb = GetComponent<Rigidbody2D>();
+        Debug.LogError("GameConfig não encontrado!");
+        return;
     }
+
+
+}
 
     void OnMouseDown()
     {
@@ -31,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
         Vector2 direction = dragStart - dragEnd;
 
-        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+      	rb.AddForce(direction * config.launchForce, ForceMode2D.Impulse);
 
         dragging = false;
     }
