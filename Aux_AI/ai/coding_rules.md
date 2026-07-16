@@ -14,3 +14,15 @@
 
 \- Commits pequenos.
 
+
+
+\## Física
+
+
+
+Antes de escrever código para resolver um problema de física, verificar primeiro as configurações nativas da Unity.
+
+
+
+Priorizar soluções da engine sempre que possível.
+

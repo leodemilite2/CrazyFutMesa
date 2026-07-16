@@ -2,37 +2,39 @@
 
 
 
-\## Sprint 7
-
-Obstáculos
-
-
-
 \## Sprint 8
 
-Primeiros puzzles
+\- Progressão entre fases
+
+\- Contador de impulsos
+
+\- Sistema de estrelas
 
 
 
 \## Sprint 9
 
-Sistema de fases
+\- Salvamento
+
+\- Seleção de fases
 
 
 
 \## Sprint 10
 
-Menus
+\- Sons
+
+\- Interface
 
 
 
 \## Sprint 11
 
-Sons
+\- Primeiras mecânicas especiais
 
 
 
 \## Sprint 12
 
-Polimento
+\- Polimento
 

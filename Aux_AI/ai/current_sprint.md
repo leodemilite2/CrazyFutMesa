@@ -1,4 +1,4 @@
-Sprint 7
+\# Sprint 8
 
 
 
@@ -6,5 +6,19 @@ Objetivo
 
 
 
-Criar obstáculos para iniciar a construção dos puzzles.
+Transformar o protótipo em um jogo com progressão.
+
+
+
+Entregas previstas
+
+
+
+\- Contador de impulsos
+
+\- Sistema de estrelas
+
+\- Progressão entre fases
+
+\- Desbloqueio de fases
 

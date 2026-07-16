@@ -6,27 +6,15 @@
 
 
 
-\*\*Sprint Atual:\*\* 6 ✅ Concluída
+Sprint Atual: \*\*7 ✅ Concluída\*\*
 
 
 
-\*\*Versão:\*\* 0.0.1
+Versão: \*\*0.0.2\*\*
 
 
 
-\*\*Tempo de desenvolvimento:\*\* \~7 horas
-
-
-
-\---
-
-
-
-\# Objetivo
-
-
-
-Criar um jogo casual inspirado no Golf Battle utilizando a temática do Futebol de Mesa, focado em física divertida e fases baseadas em puzzles.
+Tempo aproximado de desenvolvimento: \*\*\~8 horas\*\*
 
 
 
@@ -34,55 +22,37 @@ Criar um jogo casual inspirado no Golf Battle utilizando a temática do Futebol 
 
 
 
-\# Filosofia
-
-
-
-\- Gameplay antes de polimento.
-
-\- Uma mecânica principal por Sprint.
-
-\- Código simples.
-
-\- Refatoração somente ao final das Sprints.
-
-\- Android primeiro.
-
-\- iOS depois.
-
-
-
-\---
-
-
-
-\# Vertical Slice
+\## Vertical Slice
 
 
 
 \- \[x] Projeto Unity
 
-\- \[x] Física básica
+\- \[x] Física
 
-\- \[x] Sistema de mira
+\- \[x] Mira
 
-\- \[x] Potência do lançamento
+\- \[x] Potência
 
-\- \[x] Feedback visual da mira
+\- \[x] Feedback visual
 
 \- \[x] Primeiro nível
 
 \- \[x] Condição de vitória
 
-\- \[x] Reinício da fase
+\- \[x] Reinício
+
+\- \[x] Obstáculos
+
+\- \[x] Primeiros puzzles
 
 
 
-Progresso estimado:
+Progresso estimado
 
 
 
-████████░░ 70%
+█████████░ 80%
 
 
 
@@ -90,11 +60,11 @@ Progresso estimado:
 
 
 
-\# Próxima Sprint
+\## Próxima Sprint
 
 
 
-Sprint 7
+Sprint 8
 
 
 
@@ -102,5 +72,5 @@ Objetivo:
 
 
 
-Criar puzzles utilizando obstáculos.
+Progressão entre fases e sistema de pontuação.
 

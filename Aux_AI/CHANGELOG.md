@@ -52,3 +52,25 @@
 
 \- Reinício da fase
 
+
+
+\## v0.0.2
+
+
+
+\### Sprint 7
+
+
+
+\- Engine física estabilizada
+
+\- Correção de colisões
+
+\- Correção do problema da bola ficar presa
+
+\- Criação do sistema de obstáculos
+
+\- Criação das três primeiras fases
+
+\- Validação da mecânica principal
+
