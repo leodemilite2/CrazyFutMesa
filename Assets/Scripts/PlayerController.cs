@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(direction * config.launchForce, ForceMode2D.Impulse);
 
+	GameManager.Instance.RegisterShot();
+
         dragging = false;
         aimLine.enabled = false;
     }
@@ -104,4 +106,6 @@ public class PlayerController : MonoBehaviour
         aimLine.SetPosition(0, Vector3.zero);
         aimLine.SetPosition(1, direction);
     }
+
+
 }

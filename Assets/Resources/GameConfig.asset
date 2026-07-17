@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec7a8e8fd55f704abdae60f633d0d5a, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: Assembly-CSharp::GameConfig
-  launchForce: 10
+  launchForce: 8.03
   playerMass: 0.5
-  playerLinearDamping: 3.5
+  playerLinearDamping: 2.86
+  maxBallSpeed: 10000
   ballMass: 0.025
-  ballLinearDamping: 2
+  ballLinearDamping: 2.46
   maxDragDistance: 3

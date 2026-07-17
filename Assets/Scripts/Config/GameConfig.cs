@@ -13,6 +13,8 @@ public class GameConfig : ScriptableObject
 
     [Header("Ball")]
 
+    public float maxBallSpeed = 10000f;
+
     public float ballMass = 0.3f;
 
     public float ballLinearDamping = 0.4f;
