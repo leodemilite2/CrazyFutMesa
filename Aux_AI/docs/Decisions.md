@@ -54,3 +54,23 @@
 
 \- Sistema de estrelas aprovado para o MVP.
 
+
+
+\# Decisão
+
+
+
+A prioridade do projeto deixa de ser adicionar novas mecânicas e passa a ser concluir um jogo jogável do início ao fim.
+
+
+
+Critério adotado:
+
+
+
+"Toda nova funcionalidade deve aproximar o projeto da versão 1.0."
+
+
+
+Novos obstáculos permanecem no backlog para futuras versões.
+

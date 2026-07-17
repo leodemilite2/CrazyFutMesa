@@ -1,40 +1,50 @@
-\# Roadmap
+\## Próximas Sprints
 
 
 
-\## Sprint 8
+\### Sprint 9
 
-\- Progressão entre fases
+\- Sistema de estrelas.
 
-\- Contador de impulsos
+\- Sistema de recompensas.
 
-\- Sistema de estrelas
+\- LevelData.
 
-
-
-\## Sprint 9
-
-\- Salvamento
-
-\- Seleção de fases
+\- Progressão do jogador.
 
 
 
-\## Sprint 10
+\### Sprint 10
 
-\- Sons
+\- SaveGame.
 
-\- Interface
+\- Persistência.
 
+\- Inventário.
 
-
-\## Sprint 11
-
-\- Primeiras mecânicas especiais
+\- Seleção de fases.
 
 
 
-\## Sprint 12
+\### Sprint 11
 
-\- Polimento
+\- Menu Principal.
+
+\- UI definitiva.
+
+\- Tela de vitória.
+
+\- Polimento.
+
+
+
+\### Sprint 12+
+
+\- Novos obstáculos.
+
+\- Novas bolas.
+
+\- Novos times.
+
+\- Conteúdo adicional.
 

@@ -1,24 +1,36 @@
-\# Sprint 8
+\# Sprint 9
 
 
 
-Objetivo
+\## Objetivo
 
 
 
-Transformar o protótipo em um jogo com progressão.
+Implementar o sistema de progressão do jogador.
 
 
 
-Entregas previstas
+\## Entregas previstas
 
 
 
-\- Contador de impulsos
+\- Sistema de estrelas.
 
-\- Sistema de estrelas
+\- LevelData para configuração individual de cada fase.
 
-\- Progressão entre fases
+\- Contador de impulsos durante a partida.
 
-\- Desbloqueio de fases
+\- Recompensas por estrelas.
+
+\- Desbloqueio de fases.
+
+\- Base para SaveGame.
+
+
+
+\## Status
+
+
+
+Não iniciado.
 
