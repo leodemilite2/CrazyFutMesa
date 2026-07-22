@@ -4,6 +4,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+
+[Header("Level")]
+[SerializeField] private LevelData currentLevel;
+
     public static GameManager Instance;
 
     public int ShotCount { get; private set; }
@@ -13,17 +17,42 @@ public class GameManager : MonoBehaviour
 
 	private bool levelCompleted = false;
 
+[SerializeField]
+private TMP_Text starsText;
+[SerializeField] private TMP_Text threeStarsText;
+[SerializeField] private TMP_Text twoStarsText;
+[SerializeField] private TMP_Text oneStarText;
+
+
+
 private void Awake()
 {
+    if (Instance != null && Instance != this)
+    {
+        Destroy(gameObject);
+        return;
+    }
+
     Instance = this;
+
+    if (currentLevel == null)
+    {
+        Debug.LogError("GameManager: Current Level não foi atribuído!");
+    }
 
     levelCompleted = false;
     Time.timeScale = 1f;
+
+    ShotCount = 0;
+
+    UpdateHUD();
+UpdateStarsGoalPanel();
 }
 
     public void RegisterShot()
     {
         ShotCount++;
+	UpdateHUD();
         Debug.Log($"Impulsos: {ShotCount}");
     }
 
@@ -41,11 +70,17 @@ private void Awake()
 
 	    Debug.Log($"LevelCompleted - ShotCount = {ShotCount}");
 
-            shotCountText.text = $"Impulsos: {ShotCount}";
+            UpdateHUD();
 	
 	    winPanel.SetActive(true);
 	
 	    Time.timeScale = 0f;
+
+	    Debug.Log($"Estrelas conquistadas: {GetStars()}");
+
+	    LevelResult result = GetLevelResult();
+
+	    starsText.text = BuildStarsString(result.stars);
 	}
 
 private void Update()
@@ -74,4 +109,66 @@ private void Update()
         }
     }
 }
+
+public int GetStars()
+{
+    if (ShotCount <= currentLevel.threeStarShots)
+        return 3;
+
+    if (ShotCount <= currentLevel.twoStarShots)
+        return 2;
+
+    if (ShotCount <= currentLevel.oneStarShots)
+        return 1;
+
+    return 0;
+}
+
+private string BuildStarsString(int stars)
+{
+    switch (stars)
+    {
+        case 3: return "3 ESTRELAS!";
+        case 2: return "2 ESTRELAS!";
+        case 1: return "1 ESTRELA!";
+        default: return "PRÓXIMA FASE!";
+    }
+}
+
+public LevelResult GetLevelResult()
+{
+    return new LevelResult
+    {
+        stars = GetStars(),
+        impulses = ShotCount
+    };
+}
+
+private void UpdateHUD()
+{
+    if (shotCountText == null)
+    {
+        Debug.LogError("ShotCountText não foi atribuído no GameManager.");
+        return;
+    }
+
+    shotCountText.text = $"Impulsos: {ShotCount:00}";
+}
+
+private void UpdateStarsGoalPanel()
+{
+    if (currentLevel == null)
+        return;
+
+    if (threeStarsText == null || twoStarsText == null || oneStarText == null)
+    {
+        Debug.LogError("StarsGoalPanel não está configurado no GameManager.");
+        return;
+    }
+
+    threeStarsText.text = $"★★★ {currentLevel.threeStarShots:00}";
+    twoStarsText.text   = $"★★  {currentLevel.twoStarShots:00}";
+    oneStarText.text    = $"★   {currentLevel.oneStarShots:00}";
+}
+
 }
