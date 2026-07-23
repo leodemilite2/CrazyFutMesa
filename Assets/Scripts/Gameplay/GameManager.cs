@@ -17,8 +17,8 @@ public class GameManager : MonoBehaviour
 
 	private bool levelCompleted = false;
 
-[SerializeField]
-private TMP_Text starsText;
+[SerializeField] private TMP_Text starsText;
+[SerializeField] private TMP_Text shotResultText;
 [SerializeField] private TMP_Text threeStarsText;
 [SerializeField] private TMP_Text twoStarsText;
 [SerializeField] private TMP_Text oneStarText;
@@ -58,8 +58,25 @@ UpdateStarsGoalPanel();
 
   	public void ResetLevel()
 	{
-	    ShotCount = 0;
+	    Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
+
+    public void LoadNextLevel()
+{
+    Time.timeScale = 1f;
+
+    int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
+
+    if (nextScene < SceneManager.sceneCountInBuildSettings)
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+    else
+    {
+        Debug.Log("Última fase concluída!");
+    }
+}
 
 	public void LevelCompleted()
 	{
@@ -81,32 +98,22 @@ UpdateStarsGoalPanel();
 	    LevelResult result = GetLevelResult();
 
 	    starsText.text = BuildStarsString(result.stars);
-	}
-
+	    shotResultText.text = $"Qtd. Impulsos: {result.impulses}";
+    }
 private void Update()
 {
-    // Reinicia a fase a qualquer momento
     if (Input.GetKeyDown(KeyCode.R))
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResetLevel();
         return;
     }
 
-    // Só permite avançar após concluir a fase
     if (!levelCompleted)
         return;
 
     if (Input.GetKeyDown(KeyCode.N))
     {
-        Time.timeScale = 1f;
-
-        int nextScene = SceneManager.GetActiveScene().buildIndex + 1;
-
-        if (nextScene < SceneManager.sceneCountInBuildSettings)
-        {
-            SceneManager.LoadScene(nextScene);
-        }
+        LoadNextLevel();
     }
 }
 

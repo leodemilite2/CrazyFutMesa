@@ -539,6 +539,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1628198349}
     - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: shotResultText
+      value: 
+      objectReference: {fileID: 1000459492}
+    - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
       propertyPath: threeStarsText
       value: 
       objectReference: {fileID: 582477378}
@@ -1002,11 +1006,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1136955992296957580, guid: 4aafc0fb77e52a44f86548f48aa8edf2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1136955992296957580, guid: 4aafc0fb77e52a44f86548f48aa8edf2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 1136955992296957580, guid: 4aafc0fb77e52a44f86548f48aa8edf2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1072,6 +1076,17 @@ PrefabInstance:
 --- !u!114 &1000459491 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8935389060782150019, guid: 4aafc0fb77e52a44f86548f48aa8edf2, type: 3}
+  m_PrefabInstance: {fileID: 1000459490}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1000459492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4626934609957077790, guid: 4aafc0fb77e52a44f86548f48aa8edf2, type: 3}
   m_PrefabInstance: {fileID: 1000459490}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
