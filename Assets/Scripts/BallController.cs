@@ -27,5 +27,6 @@ public class BallController : MonoBehaviour
             rb.linearVelocity =
                 rb.linearVelocity.normalized * config.maxBallSpeed;
         }
+        /*testefdss*/
     }
 }
