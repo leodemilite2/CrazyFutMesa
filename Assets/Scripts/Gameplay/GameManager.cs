@@ -62,7 +62,7 @@ UpdateStarsGoalPanel();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
-    public void LoadNextLevel()
+public void LoadNextLevel()
 {
     Time.timeScale = 1f;
 
@@ -74,7 +74,7 @@ UpdateStarsGoalPanel();
     }
     else
     {
-        Debug.Log("Última fase concluída!");
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
