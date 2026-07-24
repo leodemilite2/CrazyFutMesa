@@ -97,6 +97,8 @@ public void LoadNextLevel()
 
 	    LevelResult result = GetLevelResult();
 
+        SaveManager.Instance.SaveLevelResult(result);
+
 	    starsText.text = BuildStarsString(result.stars);
 	    shotResultText.text = $"Qtd. Impulsos: {result.impulses}";
     }
@@ -146,6 +148,7 @@ public LevelResult GetLevelResult()
 {
     return new LevelResult
     {
+        levelIndex = SceneManager.GetActiveScene().buildIndex,
         stars = GetStars(),
         impulses = ShotCount
     };

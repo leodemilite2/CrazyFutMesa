@@ -1,9 +1,7 @@
-using UnityEngine;
-
-public class LevelResult : MonoBehaviour
+[System.Serializable]
+public class LevelResult
 {
-
+    public int levelIndex;
     public int stars;
     public int impulses;
-
 }
