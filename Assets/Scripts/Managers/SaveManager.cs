@@ -19,8 +19,9 @@ public class SaveManager : MonoBehaviour
         }
 
         Instance = this;
-
+        DontDestroyOnLoad(gameObject);
         LoadGame();
+        
     }
 
     private void LoadGame()
@@ -35,6 +36,8 @@ public class SaveManager : MonoBehaviour
         else
         {
             saveData = new SaveData();
+
+            saveData.highestUnlockedLevel = 0;
 
             SaveGame();
 
@@ -61,17 +64,17 @@ public class SaveManager : MonoBehaviour
     public void SaveLevelResult(LevelResult result)
     {
         // Garante que exista um registro para esta fase
-        while (saveData.levels.Count < result.levelIndex)
+        while (saveData.levels.Count <= result.levelIndex)
         {
             saveData.levels.Add(new LevelSaveData());
         }
 
-        LevelSaveData levelData = saveData.levels[result.levelIndex - 1];
+        LevelSaveData levelData = saveData.levels[result.levelIndex];
 
-        // Mantém sempre a melhor pontuação em estrelas
+        // Mantém sempre a maior quantidade de estrelas
         levelData.stars = Mathf.Max(levelData.stars, result.stars);
 
-        // Guarda o menor número de impulsos
+        // Mantém o menor número de impulsos
         if (levelData.bestShots == 0 || result.impulses < levelData.bestShots)
         {
             levelData.bestShots = result.impulses;
@@ -91,19 +94,20 @@ public class SaveManager : MonoBehaviour
         return saveData.highestUnlockedLevel;
     }
 
+
     public int GetStars(int levelIndex)
     {
-        if (levelIndex <= 0 || levelIndex > saveData.levels.Count)
+        if (levelIndex < 0 || levelIndex >= saveData.levels.Count)
             return 0;
 
-        return saveData.levels[levelIndex - 1].stars;
+        return saveData.levels[levelIndex].stars;
     }
 
     public int GetBestShots(int levelIndex)
     {
-        if (levelIndex <= 0 || levelIndex > saveData.levels.Count)
+        if (levelIndex < 0 || levelIndex >= saveData.levels.Count)
             return 0;
 
-        return saveData.levels[levelIndex - 1].bestShots;
+        return saveData.levels[levelIndex].bestShots;
     }
 }

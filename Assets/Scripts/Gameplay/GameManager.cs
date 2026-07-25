@@ -148,7 +148,7 @@ public LevelResult GetLevelResult()
 {
     return new LevelResult
     {
-        levelIndex = SceneManager.GetActiveScene().buildIndex,
+        levelIndex = currentLevel.levelNumber,
         stars = GetStars(),
         impulses = ShotCount
     };
