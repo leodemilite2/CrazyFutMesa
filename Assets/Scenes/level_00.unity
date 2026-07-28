@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &124181585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6603748021192334464, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}
+  m_PrefabInstance: {fileID: 582477375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &127777424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -529,6 +540,10 @@ PrefabInstance:
       propertyPath: twoStarsText
       value: 
       objectReference: {fileID: 1759053387}
+    - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: bestShotsText
+      value: 
+      objectReference: {fileID: 124181585}
     - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
       propertyPath: shotCountText
       value: 

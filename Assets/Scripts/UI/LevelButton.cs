@@ -13,6 +13,11 @@ public class LevelButton : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private TMP_Text levelText;
+    [SerializeField] private GameObject lockIcon;
+    [SerializeField] private Image[] stars;
+
+    [SerializeField] private Sprite filledStar;
+[SerializeField] private Sprite emptyStar;
 
     private Button button;
     private Image image;
@@ -25,14 +30,26 @@ public class LevelButton : MonoBehaviour
         button.onClick.AddListener(LoadLevel);
     }
 
-    public void Initialize(bool unlocked)
+    public void Initialize(bool unlocked, int starCount)
     {
         button.interactable = unlocked;
-        levelText.text = levelNumber.ToString("00");
 
         image.color = unlocked
             ? Color.white
             : Color.gray;
+
+        levelText.text = levelNumber.ToString("00");
+
+        lockIcon.SetActive(!unlocked);
+
+        for (int i = 0; i < stars.Length; i++)
+        {
+            stars[i].gameObject.SetActive(unlocked);
+
+            stars[i].sprite = i < starCount
+                ? filledStar
+                : emptyStar;
+        }
     }
 
     public void LoadLevel()

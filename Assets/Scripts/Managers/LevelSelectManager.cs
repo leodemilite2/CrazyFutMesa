@@ -11,7 +11,9 @@ public class LevelSelectManager : MonoBehaviour
         foreach (LevelButton button in levelButtons)
         {
             bool unlocked = button.LevelNumber <= highestUnlockedLevel;
-            button.Initialize(unlocked);
+            int stars = SaveManager.Instance.GetStars(button.LevelNumber);
+
+            button.Initialize(unlocked, stars);
         }
     }
 }

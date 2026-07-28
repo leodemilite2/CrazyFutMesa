@@ -22,8 +22,7 @@ public class GameManager : MonoBehaviour
 [SerializeField] private TMP_Text threeStarsText;
 [SerializeField] private TMP_Text twoStarsText;
 [SerializeField] private TMP_Text oneStarText;
-
-
+[SerializeField] private TMP_Text bestShotsText;
 
 private void Awake()
 {
@@ -46,7 +45,8 @@ private void Awake()
     ShotCount = 0;
 
     UpdateHUD();
-UpdateStarsGoalPanel();
+    UpdateStarsGoalPanel();
+    UpdateBestShotsHUD();
 }
 
     public void RegisterShot()
@@ -59,8 +59,20 @@ UpdateStarsGoalPanel();
   	public void ResetLevel()
 	{
 	    Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
+
+    public void OpenLevelSelect()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelSelect");
+    }
+
+    public void OpenMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
 
 public void LoadNextLevel()
 {
@@ -98,6 +110,8 @@ public void LoadNextLevel()
 	    LevelResult result = GetLevelResult();
 
         SaveManager.Instance.SaveLevelResult(result);
+
+        UpdateBestShotsHUD();
 
 	    starsText.text = BuildStarsString(result.stars);
 	    shotResultText.text = $"Qtd. Impulsos: {result.impulses}";
@@ -179,6 +193,16 @@ private void UpdateStarsGoalPanel()
     threeStarsText.text = $"★★★ {currentLevel.threeStarShots:00}";
     twoStarsText.text   = $"★★  {currentLevel.twoStarShots:00}";
     oneStarText.text    = $"★   {currentLevel.oneStarShots:00}";
+}
+
+private void UpdateBestShotsHUD()
+{
+    int bestShots = SaveManager.Instance.GetBestShots(currentLevel.levelNumber);
+
+    if (bestShots > 0)
+        bestShotsText.text = $"Best: {bestShots:00}";
+    else
+        bestShotsText.text = "Best: --";
 }
 
 }
