@@ -12,6 +12,10 @@ public class LevelData : ScriptableObject
     public int twoStarShots = 5;
     public int oneStarShots = 8;
 
-[Header("Progressão")]
-public string nextLevel;
+    [Header("Supporters")]
+    [Min(0)]
+    public float supportersMultiplier = 1f;
+
+    [Header("Progressão")]
+    public string nextLevel;
 }

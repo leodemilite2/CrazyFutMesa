@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 [SerializeField] private TMP_Text twoStarsText;
 [SerializeField] private TMP_Text oneStarText;
 [SerializeField] private TMP_Text bestShotsText;
+[SerializeField] private TMP_Text totalStarsText;
+[SerializeField] private TMP_Text supportersText;
 
 private void Awake()
 {
@@ -47,6 +49,7 @@ private void Awake()
     UpdateHUD();
     UpdateStarsGoalPanel();
     UpdateBestShotsHUD();
+    UpdateProgressPanel();
 }
 
     public void RegisterShot()
@@ -110,6 +113,17 @@ public void LoadNextLevel()
 	    LevelResult result = GetLevelResult();
 
         SaveManager.Instance.SaveLevelResult(result);
+
+        int supportersEarned = SaveManager.Instance.RewardSupporters(
+            result.stars,
+            currentLevel.supportersMultiplier
+        );
+
+        UpdateProgressPanel();
+
+        Debug.Log($"Multiplicador: {currentLevel.supportersMultiplier}");
+        Debug.Log($"Torcedores ganhos: {supportersEarned}");
+        Debug.Log($"Total: {SaveManager.Instance.GetSupporters()}");
 
         UpdateBestShotsHUD();
 
@@ -203,6 +217,15 @@ private void UpdateBestShotsHUD()
         bestShotsText.text = $"Best: {bestShots:00}";
     else
         bestShotsText.text = "Best: --";
+}
+
+private void UpdateProgressPanel()
+{
+    totalStarsText.text =
+        $"⭐ {SaveManager.Instance.GetTotalStars()}";
+
+    supportersText.text =
+        $"👥 {SaveManager.Instance.GetSupporters():N0}";
 }
 
 }

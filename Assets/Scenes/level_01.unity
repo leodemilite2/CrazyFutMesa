@@ -547,9 +547,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1000459492}
     - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: supportersText
+      value: 
+      objectReference: {fileID: 582477380}
+    - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
       propertyPath: threeStarsText
       value: 
       objectReference: {fileID: 582477378}
+    - target: {fileID: 786001704459147337, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: totalStarsText
+      value: 
+      objectReference: {fileID: 1721882539}
     - target: {fileID: 3563879046164906909, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -865,6 +873,17 @@ MonoBehaviour:
 --- !u!114 &582477379 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6603748021192334464, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}
+  m_PrefabInstance: {fileID: 582477375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &582477380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1850994874359462018, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}
   m_PrefabInstance: {fileID: 582477375}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -1279,6 +1298,17 @@ PrefabInstance:
 --- !u!114 &1628198349 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2373218640627526786, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}
+  m_PrefabInstance: {fileID: 582477375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1721882539 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8759738555395990771, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}
   m_PrefabInstance: {fileID: 582477375}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

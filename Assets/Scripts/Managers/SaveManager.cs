@@ -21,6 +21,9 @@ public class SaveManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         LoadGame();
+
+        Debug.Log($"Estrelas Totais: {GetTotalStars()}");
+        Debug.Log($"Torcedores: {GetSupporters()}");
         
     }
 
@@ -109,5 +112,59 @@ public class SaveManager : MonoBehaviour
             return 0;
 
         return saveData.levels[levelIndex].bestShots;
+    }
+
+    public int GetSupporters()
+    {
+        return saveData.supporters;
+    }
+
+    public void AddSupporters(int amount)
+    {
+        saveData.supporters += amount;
+
+        SaveGame();
+    }
+
+    public int GetTotalStars()
+    {
+        int total = 0;
+
+        foreach (LevelSaveData level in saveData.levels)
+        {
+            total += level.stars;
+        }
+
+        return total;
+    }
+
+    public int RewardSupporters(int stars, float multiplier)
+    {
+        int baseReward = 0;
+
+        switch (stars)
+        {
+            case 0:
+                baseReward = Random.Range(0, 101);
+                break;
+
+            case 1:
+                baseReward = Random.Range(100, 1001);
+                break;
+
+            case 2:
+                baseReward = Random.Range(1000, 10001);
+                break;
+
+            case 3:
+                baseReward = Random.Range(10000, 100001);
+                break;
+        }
+
+        int finalReward = Mathf.RoundToInt(baseReward * multiplier);
+
+        AddSupporters(finalReward);
+
+        return finalReward;
     }
 }

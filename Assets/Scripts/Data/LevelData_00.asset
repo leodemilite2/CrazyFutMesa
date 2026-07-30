@@ -17,4 +17,5 @@ MonoBehaviour:
   threeStarShots: 1
   twoStarShots: 3
   oneStarShots: 5
+  supportersMultiplier: 0.001
   nextLevel: Level_01
