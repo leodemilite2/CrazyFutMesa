@@ -22,8 +22,13 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
 
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+    }    
+
+    public void OpenCollection()
+    {
+        SceneManager.LoadScene("CollectionScreen");
     }
 }

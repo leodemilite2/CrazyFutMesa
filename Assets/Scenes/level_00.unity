@@ -198,6 +198,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9795bc8a94873044c9f2843d76f7bc7f, type: 3}
+--- !u!212 &127777425 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6047068227818883758, guid: 9795bc8a94873044c9f2843d76f7bc7f, type: 3}
+  m_PrefabInstance: {fileID: 127777424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240309539
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,6 +624,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7139111123072004210, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139111123072004210, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: ballRenderer
+      value: 
+      objectReference: {fileID: 1361856446}
+    - target: {fileID: 7139111123072004210, guid: 2dba5b97159cd5f48970cf0c29d4d333, type: 3}
+      propertyPath: playerRenderer
+      value: 
+      objectReference: {fileID: 127777425}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1152,6 +1169,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62f23cc0a4fa38a49bde7b13d411608e, type: 3}
+--- !u!212 &1361856446 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2852327424424107575, guid: 62f23cc0a4fa38a49bde7b13d411608e, type: 3}
+  m_PrefabInstance: {fileID: 1361856445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1628198349 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2373218640627526786, guid: cc5fe3d296a55bf4c8d21ed0fe4209bd, type: 3}

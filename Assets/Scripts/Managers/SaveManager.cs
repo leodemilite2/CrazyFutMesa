@@ -14,6 +14,9 @@ public class SaveManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
+            Debug.Log(
+                $"Destruindo SaveManager duplicado: {GetEntityId()}");
+            
             Destroy(gameObject);
             return;
         }
@@ -35,6 +38,8 @@ public class SaveManager : MonoBehaviour
             saveData = JsonUtility.FromJson<SaveData>(json);
 
             Debug.Log("Save carregado.");
+            Debug.Log($"LOAD -> Team: {saveData.selectedTeamId} | Ball: {saveData.selectedBallId}"
+        );
         }
         else
         {
@@ -166,5 +171,106 @@ public class SaveManager : MonoBehaviour
         AddSupporters(finalReward);
 
         return finalReward;
+    }
+
+    public bool IsUnlocked(UnlockMethod method, int unlockValue)
+    {
+        switch (method)
+        {
+            case UnlockMethod.Stars:
+                return GetTotalStars() >= unlockValue;
+
+            case UnlockMethod.Supporters:
+                return GetSupporters() >= unlockValue;
+
+            default:
+                return false;
+        }
+    }
+
+    public bool IsTeamUnlocked(TeamData team)
+    {
+        return IsCosmeticUnlocked(team);
+    }
+
+    public bool IsBallUnlocked(BallData ball)
+    {
+        return IsCosmeticUnlocked(ball);
+    }
+
+    public bool IsCosmeticUnlocked(CosmeticData cosmetic)
+    {
+        return IsUnlocked(
+            cosmetic.unlockMethod,
+            cosmetic.unlockValue
+        );
+    }
+
+    public void SelectTeam(int teamId)
+    {
+        saveData.selectedTeamId = teamId;
+        Debug.Log($"SAVE TEAM -> {teamId}");
+        SaveGame();
+    }
+
+    public void SelectBall(int ballId)
+    {
+        saveData.selectedBallId = ballId;
+        Debug.Log($"SAVE BALL -> {ballId}");
+        SaveGame();
+    }
+
+    public int GetSelectedTeamId()
+    {
+        return saveData.selectedTeamId;
+    }
+
+    public int GetSelectedBallId()
+    {
+        return saveData.selectedBallId;
+    }
+
+    public void SetShowingBalls(bool value)
+    {
+        saveData.showingBalls = value;
+
+        SaveGame();
+    }
+
+    public bool IsShowingBalls()
+    {
+        return saveData.showingBalls;
+    }
+
+    public TeamData GetSelectedTeam()
+    {
+        TeamData[] teams =
+            Resources.LoadAll<TeamData>("Teams");
+
+        foreach (TeamData team in teams)
+        {
+            if (team.id == saveData.selectedTeamId)
+            {
+                return team;
+            }
+        }
+
+        return null;
+    }
+
+    public BallData GetSelectedBall()
+    {
+        BallData[] balls =
+            Resources.LoadAll<BallData>("Balls");
+
+        foreach (BallData ball in balls)
+        {
+            if (ball.id == saveData.selectedBallId)
+            {
+                return ball;
+            }
+        }
+
+        return null;
     }
 }

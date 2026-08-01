@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed41638a6ec96fd48baa7b5b6fdc2d70, type: 3}
+  m_Name: huracan
+  m_EditorClassIdentifier: Assembly-CSharp::TeamData
+  id: 1
+  itemName: huracan
+  previewSprite: {fileID: 7629226261881693502, guid: f7f481bb9d6c05842b59af1675befb28, type: 3}
+  unlockMethod: 0
+  unlockValue: 5

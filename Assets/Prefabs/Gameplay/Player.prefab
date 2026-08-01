@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2082871380595855382}
   - component: {fileID: 1188712442953212050}
   - component: {fileID: 1501451419178989168}
+  - component: {fileID: 1702393245699873215}
   m_Layer: 0
   m_Name: Player
   m_TagString: PlayerTag
@@ -32,7 +33,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0100006685, w: 0.99995}
   m_LocalPosition: {x: 2.46, y: -3.09, z: 0}
-  m_LocalScale: {x: 1.75, y: 1.75, z: 1.75}
+  m_LocalScale: {x: 1.8900001, y: 1.8900001, z: 1.75}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7333657689611239187}
@@ -87,11 +88,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.8018868, g: 0.13238695, b: 0.15185276, a: 1}
+  m_Sprite: {fileID: 7629226261881693502, guid: f7f481bb9d6c05842b59af1675befb28, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
+  m_DrawMode: 1
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -198,6 +199,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023330cbe14ca554f84ff1540f755263, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!114 &1702393245699873215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24433239266845177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd79a7e6c8cb1a646b339f8ec17e3ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerVisual
 --- !u!1 &7647510775063116334
 GameObject:
   m_ObjectHideFlags: 0

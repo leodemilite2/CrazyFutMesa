@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5035088193998757614}
   - component: {fileID: 786001704459147337}
+  - component: {fileID: 7139111123072004210}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,5 +45,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5452109bbd013d4c81d603f96aa12a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  currentLevel: {fileID: 0}
   winPanel: {fileID: 0}
   shotCountText: {fileID: 0}
+  starsText: {fileID: 0}
+  shotResultText: {fileID: 0}
+  threeStarsText: {fileID: 0}
+  twoStarsText: {fileID: 0}
+  oneStarText: {fileID: 0}
+  bestShotsText: {fileID: 0}
+  totalStarsText: {fileID: 0}
+  supportersText: {fileID: 0}
+--- !u!114 &7139111123072004210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3563879046164906909}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b038abdd6bfdb43a79246a085dd6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CosmeticApplier
+  playerRenderer: {fileID: 0}
+  ballRenderer: {fileID: 0}
