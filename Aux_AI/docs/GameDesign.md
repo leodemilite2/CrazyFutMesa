@@ -1,8 +1,8 @@
-\# Game Design
+# Game Design
 
 
 
-\## Nome
+## Nome
 
 
 
@@ -10,15 +10,14 @@ Crazy FutMesa
 
 
 
-\## Inspiração
+## Inspiração
 
 
 
 Golf Battle
 
 
-
-\## Identidade
+## Identidade
 
 
 
@@ -34,7 +33,7 @@ Mistura física divertida com puzzles.
 
 
 
-\## Público
+## Público
 
 
 
@@ -44,3 +43,13 @@ Qualquer pessoa.
 
 Não é necessário conhecer Futebol de Mesa.
 
+
+# Filosofia do jogo
+
+"O jogador precisa enxergar o problema inteiro antes de decidir qual jogada executar."
+
+Referências:
+
+- Angry Birds
+- Cut the Rope
+- Where's my Water?

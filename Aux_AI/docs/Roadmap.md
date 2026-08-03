@@ -1,50 +1,9 @@
-\## Próximas Sprints
+Sprint 11 → objetos simples
 
+Sprint 12 → objetos animados
 
+Sprint 13 → áreas de reset
 
-\### Sprint 9
+Sprint 14 → áreas especiais
 
-\- Sistema de estrelas.
-
-\- Sistema de recompensas.
-
-\- LevelData.
-
-\- Progressão do jogador.
-
-
-
-\### Sprint 10
-
-\- SaveGame.
-
-\- Persistência.
-
-\- Inventário.
-
-\- Seleção de fases.
-
-
-
-\### Sprint 11
-
-\- Menu Principal.
-
-\- UI definitiva.
-
-\- Tela de vitória.
-
-\- Polimento.
-
-
-
-\### Sprint 12+
-
-\- Novos obstáculos.
-
-\- Novas bolas.
-
-\- Novos times.
-
-\- Conteúdo adicional.
-
+Sprint 15 → zoom e câmera

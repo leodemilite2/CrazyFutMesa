@@ -1,34 +1,23 @@
-\# Sprint 9
+# Sprint 11
+
+Objetivo: implementar obstáculos simples.
+
+## Objetos fixos
+
+- parede côncava
+- parede convexa
+- copo
+- garrafa
+
+## Objetos passivos
+
+- cigarro
+- caixa de fósforo
+- zagueiro
 
 
 
-\## Objetivo
-
-
-
-Implementar o sistema de progressão do jogador.
-
-
-
-\## Entregas previstas
-
-
-
-\- Sistema de estrelas.
-
-\- LevelData para configuração individual de cada fase.
-
-\- Contador de impulsos durante a partida.
-
-\- Recompensas por estrelas.
-
-\- Desbloqueio de fases.
-
-\- Base para SaveGame.
-
-
-
-\## Status
+## Status
 
 
 

@@ -74,3 +74,26 @@ Critério adotado:
 
 Novos obstáculos permanecem no backlog para futuras versões.
 
+## Decisão 001
+
+A câmera permanecerá fixa. Apenas com uma opção de zoom in e zoom out limitada.
+
+Justificativa:
+
+O jogador deve enxergar toda a fase antes de agir.
+
+## Decisão 002
+
+Game over sempre reinicia a fase.
+
+Justificativa:
+
+Redução de complexidade e consistência.
+
+## Decisão 003
+
+Cosméticos são aplicados por componente.
+
+PlayerVisual
+
+BallVisual

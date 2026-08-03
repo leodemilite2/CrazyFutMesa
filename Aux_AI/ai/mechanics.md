@@ -20,43 +20,27 @@
 
 
 
-\---
+## Sprint 11
 
+- paredes
+- copos
+- cigarros
+- zagueiros
 
+## Sprint 12
 
-\## MVP
+- goleiro
+- plataforma
+- placa giratória
 
+## Sprint 13
 
+- buraco
+- área vermelha
+- linha lateral
 
-\- ⏳ Shot Counter
+## Sprint 14
 
-\- ⏳ Stars
-
-\- ⏳ Level Progression
-
-
-
-\---
-
-
-
-\## Pós-MVP
-
-
-
-\- ☐ Ice
-
-\- ☐ Sand
-
-\- ☐ Beer
-
-\- ☐ Fan
-
-\- ☐ Hazard
-
-\- ☐ Defender
-
-\- ☐ Moving Obstacle
-
-\- ☐ Teleporter
-
+- cerveja
+- gelo
+- ventilador

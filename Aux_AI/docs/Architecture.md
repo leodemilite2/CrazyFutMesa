@@ -44,3 +44,26 @@ Prefabs
 
 \- Ball
 
+
+SaveManager
+
+GameManager
+
+Player
+├── PlayerController
+└── PlayerVisual
+
+Ball
+├── BallController
+└── BallVisual
+
+Adicionar:
+
+AreaEffect
+├── BeerArea
+├── IceArea
+└── FanArea
+AnimatedObstacle
+├── Goalkeeper
+├── RotatingPlatform
+└── Elevator

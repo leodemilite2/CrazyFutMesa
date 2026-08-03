@@ -350,3 +350,28 @@ Criar um jogo de futebol de botão moderno, simples e divertido, onde a progress
 Sempre priorizar terminar um jogo completo antes de expandir seu conteúdo.
 
 Um jogo simples e terminado vale mais do que um jogo enorme e inacabado.
+
+
+# Status atual
+
+Sprint concluída: Sprint 10 — Cosméticos e coleção
+
+Próxima sprint: Sprint 11 — Objetos simples
+
+## MVP
+
+- Progressão por fases
+- Sistema de estrelas
+- Cosméticos
+- Coleção
+- Obstáculos
+- Áreas especiais
+- Zoom limitado
+
+## Fora do MVP
+
+- Loja
+- Multiplayer
+- Ranking
+- Conquistas
+- Câmera dinâmica

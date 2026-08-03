@@ -102,3 +102,13 @@
 
 \- Melhorada a arquitetura geral do projeto.
 
+
+## v0.10.0
+
+- sistema de coleção
+- cosméticos
+- PlayerVisual
+- BallVisual
+- seleção de bolas
+- seleção de times
+- roadmap oficial do MVP
