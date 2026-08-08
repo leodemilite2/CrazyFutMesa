@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6507066468135266835}
   - component: {fileID: 5516504237630854372}
   - component: {fileID: 4337389462219250874}
-  m_Layer: 0
+  - component: {fileID: 2054624772774715481}
+  m_Layer: 12
   m_Name: BeerGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,3 +158,18 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.31625265, y: -3.16}
   m_Radius: 2.04
+--- !u!114 &2054624772774715481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714496751245969026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96c7cab49a764c7458f1969c379bd78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeerCup
+  emptyCupSprite: {fileID: 21300000, guid: 47162c41d9f25d04e8193d44894ff8b1, type: 3}
+  beerAreaPrefab: {fileID: 6086521063106936637, guid: 38bcc73fd8c62bf4fbe55e8baf6609d4, type: 3}
+  minImpact: 3

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1188712442953212050}
   - component: {fileID: 1501451419178989168}
   - component: {fileID: 1702393245699873215}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: PlayerTag
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 24433239266845177}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.0100006685, w: 0.99995}
+  m_LocalRotation: {x: 0, y: 0, z: 0.010000574, w: 0.99995005}
   m_LocalPosition: {x: 2.46, y: -3.09, z: 0}
   m_LocalScale: {x: 1.8900001, y: 1.8900001, z: 1.75}
   m_ConstrainProportionsScale: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7629226261881693502, guid: f7f481bb9d6c05842b59af1675befb28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 7333657689611239187}
   - component: {fileID: 4804516742721167364}
   - component: {fileID: 7821790435358079397}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: AimLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
