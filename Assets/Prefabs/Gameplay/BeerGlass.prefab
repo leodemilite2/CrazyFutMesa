@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5516504237630854372}
   - component: {fileID: 4337389462219250874}
   - component: {fileID: 2054624772774715481}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: BeerGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}

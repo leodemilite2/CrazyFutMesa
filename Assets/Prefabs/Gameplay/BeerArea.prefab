@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1444203154231742646}
   - component: {fileID: 2868348454231150878}
   - component: {fileID: 1192757307979500084}
-  m_Layer: 12
+  m_Layer: 10
   m_Name: BeerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
