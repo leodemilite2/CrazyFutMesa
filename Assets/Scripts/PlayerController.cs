@@ -31,6 +31,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (GameManager.Instance == null)
+            return;
+
+        if (GameManager.Instance.IsLevelCompleted())
+            return;
+
         dragging = true;
 
         dragStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
