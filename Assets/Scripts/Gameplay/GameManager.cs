@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
 	[SerializeField] private GameObject winPanel;
 	[SerializeField] private TMP_Text shotCountText;
+    [SerializeField] private float winDelay = 0.5f;
 
 	private bool levelCompleted = false;
 
@@ -94,23 +95,31 @@ public void LoadNextLevel()
 }
 
 	public void LevelCompleted()
-	{
-	    if (levelCompleted)
-	        return;
-	
-	    levelCompleted = true;
+    {
+        if (levelCompleted)
+            return;
 
-	    Debug.Log($"LevelCompleted - ShotCount = {ShotCount}");
+        levelCompleted = true;
 
-            UpdateHUD();
-	
-	    winPanel.SetActive(true);
-	
-	    Time.timeScale = 0f;
+        Debug.Log($"LevelCompleted - ShotCount = {ShotCount}");
 
-	    Debug.Log($"Estrelas conquistadas: {GetStars()}");
+        UpdateHUD();
 
-	    LevelResult result = GetLevelResult();
+        // Espera a bola entrar no gol antes de mostrar a vitória
+        StartCoroutine(ShowWinScreenAfterDelay());
+    }
+
+    private System.Collections.IEnumerator ShowWinScreenAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(winDelay);
+
+        winPanel.SetActive(true);
+
+        Time.timeScale = 0f;
+
+        Debug.Log($"Estrelas conquistadas: {GetStars()}");
+
+        LevelResult result = GetLevelResult();
 
         SaveManager.Instance.SaveLevelResult(result);
 
@@ -127,8 +136,12 @@ public void LoadNextLevel()
 
         UpdateBestShotsHUD();
 
-	    starsText.text = BuildStarsString(result.stars);
-	    shotResultText.text = $"Qtd. Impulsos: {result.impulses}";
+        starsText.text = BuildStarsString(result.stars);
+        shotResultText.text = $"Qtd. Impulsos: {result.impulses}";
+    }
+    public bool IsLevelCompleted()
+    {
+        return levelCompleted;
     }
 private void Update()
 {
